@@ -19,10 +19,7 @@
         <div class="scale">
           <ul *ngIf="isSelected">
             <li *ngFor="let number of scaleCalc()">
-              <span>
-                {{ number | number: "1." }}
-                &#x2012;
-              </span>
+              <span> {{ number | number: "1." }}&#x2012; </span>
             </li>
           </ul>
         </div>

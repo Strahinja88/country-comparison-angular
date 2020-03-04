@@ -209,7 +209,7 @@ ul {
   }
 
   .info-wrapper {
-    padding-bottom: 30px;
+    padding-top: 30px;
   }
 
   .info p {
@@ -231,7 +231,7 @@ ul {
   }
 
   .scale ul li span {
-    bottom: -7px;
+    bottom: -8px;
   }
 
   .percentage {
