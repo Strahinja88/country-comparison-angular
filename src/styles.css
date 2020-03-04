@@ -1,0 +1,247 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.list {
+  border: 1px solid black;
+}
+
+.info-wrapper {
+  height: 100%;
+}
+
+.info p {
+  font-size: 20px;
+}
+
+.search-input {
+  border-radius: 20px;
+}
+
+.country-list {
+  margin-top: 10px;
+  height: 230px;
+  overflow-x: hidden;
+}
+
+.country-list li {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.compare-btn {
+  margin: 0 auto;
+  color: white !important;
+}
+
+.checkmark {
+  height: 20px;
+  width: 20px;
+}
+
+.form-check label {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.country-chart {
+  border: 1px solid black;
+}
+
+.square {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+}
+
+.country-chart ul li:nth-child(1) .square {
+  background-color: darkgreen;
+}
+
+.country-chart ul li:nth-child(2) .square {
+  background-color: green;
+}
+
+.country-chart ul li:nth-child(3) .square {
+  background-color: lightgreen;
+}
+
+.country-chart ul li:nth-child(4) .square {
+  background-color: greenyellow;
+}
+
+.country-chart ul li p {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.chart {
+  padding-bottom: 16px;
+  padding-right: 50px;
+}
+
+.chart-item-wrapper {
+  margin-left: 10px;
+  position: relative;
+}
+
+.chart-item-wrapper:nth-child(1) .chart-item {
+  background-color: darkgreen;
+}
+
+.chart-item-wrapper:nth-child(2) .chart-item {
+  background-color: green;
+}
+
+.chart-item-wrapper:nth-child(3) .chart-item {
+  background-color: lightgreen;
+}
+
+.chart-item-wrapper:nth-child(4) .chart-item {
+  background-color: greenyellow;
+}
+
+.scale ul {
+  border-right: 2px solid #6c757d;
+}
+
+.scale ul li {
+  position: relative;
+  font-size: 18px;
+  padding-bottom: 50px;
+}
+
+.scale ul li span {
+  position: absolute;
+  right: 0px;
+  bottom: -12px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.percentage-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Max width 992px */
+@media only screen and (max-width: 992px) {
+  .dashboard h1 {
+    font-size: 35px;
+  }
+
+  .dashboard h4 {
+    font-size: 20px;
+  }
+
+  .info p {
+    font-size: 18px;
+  }
+
+  .country-list {
+    height: 220px;
+  }
+
+  .country-list li {
+    font-size: 18px;
+  }
+
+  .compare-btn {
+    font-size: 18px;
+  }
+
+  .country-chart ul {
+    padding-top: 10px;
+  }
+
+  .square {
+    width: 16px;
+    height: 16px;
+  }
+
+  .country-chart ul li p {
+    font-size: 16px;
+  }
+
+  .chart {
+    padding-right: 10px;
+    padding-left: 0;
+  }
+
+  .scale-wrapper {
+    padding: 0;
+  }
+
+  .scale {
+    margin-right: 10px;
+  }
+
+  .scale ul {
+    padding-top: 0;
+  }
+
+  .scale ul li {
+    font-size: 14px;
+  }
+
+  .scale ul li span {
+    bottom: -8px;
+  }
+
+  .percentage {
+    font-size: 14px;
+  }
+}
+
+/* Max width 768px */
+@media only screen and (max-width: 768px) {
+  .dashboard h1 {
+    font-size: 32px;
+  }
+
+  .info-wrapper {
+    padding-bottom: 30px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .square {
+    width: 14px;
+    height: 14px;
+  }
+
+  .country-chart ul li p {
+    font-size: 14px;
+    padding-left: 5px;
+  }
+
+  .scale ul li {
+    font-size: 12px;
+  }
+
+  .scale ul li span {
+    bottom: -7px;
+  }
+
+  .percentage {
+    font-size: 12px;
+  }
+}
+
+/* Max width 600px */
+@media only screen and (max-width: 600px) {
+  .scale {
+    margin-right: 0;
+  }
+}

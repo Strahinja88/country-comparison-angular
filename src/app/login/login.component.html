@@ -1,0 +1,61 @@
+<div class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 m-auto">
+        <h1 class="display-4 text-center">Log In</h1>
+        <p class="lead text-center">Sign in to Country Comparasion</p>
+        <form [formGroup]="profileForm" (ngSubmit)="login()">
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="username"
+              placeholder="Username"
+              name="username"
+              class="form-control"
+              [ngClass]="username.invalid && submitted ? 'is-invalid' : ''"
+            />
+            <div *ngIf="username.invalid && submitted" class="invalid-feedback">
+              <div *ngIf="username.errors.required">Username is required.</div>
+              <div *ngIf="username.errors.minlength">
+                Username should be at least
+                {{ username.errors.minlength.requiredLength }} characters.
+              </div>
+              <div *ngIf="username.errors.cannotContainSpace">
+                Username cannot contain space.
+              </div>
+              <div *ngIf="username.errors.username">
+                Username incorrect.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Password"
+              name="password"
+              class="form-control"
+              [ngClass]="password.invalid && submitted ? 'is-invalid' : ''"
+            />
+            <div *ngIf="password.invalid && submitted" class="invalid-feedback">
+              <div *ngIf="password.errors.required">Password is required.</div>
+              <div *ngIf="password.errors.minlength">
+                Password should be at least
+                {{ password.errors.minlength.requiredLength }} characters.
+              </div>
+              <div *ngIf="password.errors.cannotContainSpace">
+                Password cannot contain space.
+              </div>
+              <div *ngIf="password.errors.password">
+                Password incorrect.
+              </div>
+            </div>
+          </div>
+
+          <input type="submit" class="btn btn-info btn-block mt-4" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

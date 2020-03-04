@@ -1,0 +1,30 @@
+<div *ngIf="isSelected; else elseBlock">
+  <p>
+    Most populated country is: <strong>{{ mostPopulated.name }}</strong>
+    with
+    <strong>
+      {{ mostPopulated.population | number: "2." }}
+    </strong>
+    inhabitants.
+  </p>
+
+  <p>
+    Most least populated country is:
+    <strong>{{ leastPopulated.name }}</strong> with
+    <strong>
+      {{ leastPopulated.population | number: "2." }}
+    </strong>
+    inhabitants.
+  </p>
+
+  <p>
+    Difference of population is:
+    <strong>
+      {{ difference | number: "2." }}
+    </strong>
+    inhabitants.
+  </p>
+</div>
+<ng-template #elseBlock
+  ><strong>You have not selected countries yet.</strong></ng-template
+>

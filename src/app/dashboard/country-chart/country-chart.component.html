@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-12 mt-5 pb-md-3 pb-sm-2 pb-1 country-chart">
+    <ul
+      *ngIf="isSelected; else notSelected"
+      class="d-flex justify-content-around p-lg-5 ml-sm-5"
+    >
+      <li *ngFor="let country of selectedCountries" class="d-flex">
+        <div class="square"></div>
+        <p class="text-muted">{{ country.name }}</p>
+      </li>
+    </ul>
+    <ng-template #notSelected
+      ><strong>You have not selected countries yet.</strong></ng-template
+    >
+    <div class="row">
+      <div
+        class="col-md-2 col-3 d-flex flex-column justify-content-end scale-wrapper"
+      >
+        <div class="scale">
+          <ul *ngIf="isSelected">
+            <li *ngFor="let number of scaleCalc()">
+              <span>
+                {{ number | number: "1." }}
+                &#x2012;
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-10 col-9 d-flex flex-column justify-content-end chart">
+        <div class="d-flex bd-highlight chart-wrapper" *ngIf="isSelected">
+          <div
+            class="d-flex flex-fill bd-highlight flex-column justify-content-end chart-item-wrapper"
+            *ngFor="let country of selectedCountries"
+          >
+            <div
+              class="chart-item"
+              [style.height]="populationPercentage(country).height"
+            >
+              <div
+                class="percentage-wrapper"
+                [ngStyle]="
+                  populationPercentage(country).populationPercentage2 >
+                  this.percentCalc()
+                    ? {
+                        color: 'white'
+                      }
+                    : {
+                        bottom: populationPercentage(country).height,
+                        color: '#6c757d'
+                      }
+                "
+              >
+                <span class="percentage">
+                  {{ populationPercentage(country).populationPercentage }}%
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
